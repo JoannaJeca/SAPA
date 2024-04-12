@@ -2,12 +2,21 @@ import { useEffect, useState } from "react"
 import { IoSearchOutline } from "react-icons/io5";
 import { IoHeartOutline } from "react-icons/io5";
 import { IoIosGitCompare } from "react-icons/io";
+import { getProduct } from "../api/storeApi";
 
 const FlashSales = () => {
 const [days, setDays] = useState<number> (0)
 const [hours, setHours] = useState<number> (0)
 const [minutes, setMinutes] = useState<number> (0)
 const [seconds, setSeconds] = useState<number> (0)
+
+const [state, setState] = useState()
+useEffect(()=>{
+    getProduct().then((res:any)=>{
+        setState(res)
+    })
+},[])
+console.log(state)
 
 useEffect(()=>{
   const Target = new Date("12/5/24 11:59:59")

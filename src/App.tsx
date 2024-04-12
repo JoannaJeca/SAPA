@@ -1,17 +1,10 @@
-import Header from './Block/Header'
-import FlashSales from './Pages/FlashSales'
-import HighTech from './Pages/HighTech'
-import Home from './Pages/Home'
+import { RouterProvider } from "react-router-dom"
+import { mainRouter } from "./Router/mainRouter"
 
 const App = () => {
   return (
     <div>
-      <Header/>
-      {/* <div className='h-[calc(100% - 90px)]'> */}
-      <Home/>
-      <FlashSales/>
-      <HighTech/>
-      {/* </div> */}
+      <RouterProvider router={mainRouter}/>
       
     </div>
   )

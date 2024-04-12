@@ -3,6 +3,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 
 const Home = () => {
+   
   return (
     <div className='w-full h-[95vh] bg-cover' >
         <div className="relative">
